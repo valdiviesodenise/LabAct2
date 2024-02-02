@@ -1,38 +1,371 @@
-.App {
-  text-align: center;
+/* styles.css */
+body {
+  min-height: 100%;
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.06rem;
+  line-height: calc(1 + 0.8 / var(--font-body-scale));
+  font-family: var(--font-body-family);
+  font-style: var(--font-body-style);
+  font-weight: var(--font-body-weight);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px;
+  background-color: #fff0f0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Logo img {
+  height: 35px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Center ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Center ul li {
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+  color: #737171;
+  font-size: 13px;
+  font-family: cardo, serif;
+}
+
+.Right span {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.Header {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.Header img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.Header img:not(:nth-child(1)) {
+  transform: translateX(100%);
+}
+
+.Deals {
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr, 1fr, 1fr));
+  grid-auto-flow: column;
+  justify-content: space-around;
+  gap: -40px;
+  margin-top: 10px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.card {
+  width: 370px;
+}
+
+.card-img {
+  width: 90%;
+}
+
+.card h2 {
+  text-align: center;
+  font-size: 17px;
+  font-family: Cardo, serif;
+  color: #505050;
+  width: 330px;
+  margin-left: 20px;
+}
+
+.card p {
+  text-align: center;
+  font-size: 18px;
+  font-family: Cardo, serif;
+  color: #505050;
+  margin-top: 10px;
+}
+
+.Title h1 {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 28px;
+  font-family: Cardo, serif;
+  color: #505050;
+}
+
+.button {
+  text-align: center;
+  font-size: 16px;
+  font-family: Americana, serif;
+  color: #717171;
+  background-color: #ffe7e7;
+  border: none;
+  width: 240px;
+  height: 50px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.Sale {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.Sale-img {
+  grid-column: 1;
+}
+
+.Sale-details {
+  grid-column: 2;
+}
+
+.Sale-img img {
+  width: 90%;
+  margin-left: 80px;
+}
+
+.Sale-details {
+  padding: 40px;
+  padding-top: 80px;
+}
+
+.Sale-details h1 {
+  font-size: 40px;
+  color: #505050;
+  font-family: Cardo, serif;
+  text-align: center;
+}
+
+.Sale-details h2 {
+  font-size: 18px;
+  color: #505050;
+  font-family: Cardo, serif;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.Sale-details p {
+  font-size: 16px;
+  color: #505050;
+  font-family: Cardo, serif;
+  text-align: center;
+}
+
+.Sale-details button {
+  text-align: center;
+  font-size: 16px;
+  font-family: Americana, serif;
+  color: #717171;
+  background-color: #ffe7e7;
+  border: none;
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  margin-left: 190px;
+}
+
+.Poster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.Poster img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.InsightsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.InsightDetails {
+  padding-left: 80px;
+  padding-top: 160px;
+  padding-right: 50px;
+}
+
+.InsightDetails h1 {
+  font-size: 27px;
+  color: #505050;
+  font-family: Cardo, serif;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+.InsightDetails p {
+  font-size: 18px;
+  color: #505050;
+  font-family: Cardo, serif;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+.InsightImage {
+  margin-top: 20px;
+}
+
+.insight-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.pink-line {
+  width: 100%;
+  height: 0.5px;
+  background-color: #e8989a;
+  margin-top: 20px;
+}
+
+.button2 {
+  text-align: center;
+  font-size: 16px;
+  font-family: Americana, serif;
+  color: #717171;
+  background-color: #ffe7e7;
+  border: none;
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.Ratings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -30px;
+}
+
+.rating {
+  background-color: #fff5f6;
+  width: 200px;
+  padding: 13px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rating-header {
+  font-size: 15px;
+  font-weight: bold;
+  color: #545454;
+}
+
+.rating-text {
+  margin-top: 10px;
+  color: #505050;
+  font-size: 12px;
+}
+
+.rating-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #545454;
+  margin-bottom: 5px;
+}
+
+.rating-description {
+  font-size: 14px;
+  color: #666;
+}
+
+.rating-username {
+  font-size: 14px;
+  color: #505050;
+  font-family: Americana, serif;
+  margin-top: 11px;
+}
+
+.rating-item {
+  font-size: 14px;
+  color: #505050;
+  font-family: Americana, serif;
+  text-decoration: underline;
+}
+
+.rating-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffefef;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.FooterLeft,
+.FooterRight,
+.FooterCenterLeft,
+.FooterCenterRight {
+  flex: 1;
+  text-align: left;
+}
+
+.Footer-Content h1 {
+  font-size: 11px;
+  margin-bottom: 20px;
+  font-family: Cardo, serif;
+  color: #363636;
+  letter-spacing: 2px;
+}
+
+.Footer-Content p {
+  font-size: 14px;
+  margin-bottom: 3px;
+  font-family: Cardo, serif;
+  color: #717171;
+  letter-spacing: 2px;
+}
+
+.FooterLeft {
+  margin-left: 45px;
+}
+
+.FooterRight {
+  margin-right: 45px;
+  margin-top: -40px;
+}
+
+.FooterCenterLeft {
+  margin-left: -180px;
+  margin-top: -80px;
+}
+
+.FooterCenterRight {
+  margin-left: -200px;
+  margin-top: -20px;
+}
+
+.Right > * {
+  color: black;
+  margin-right: 10px;
 }
