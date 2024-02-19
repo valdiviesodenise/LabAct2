@@ -369,3 +369,19 @@ body {
   color: black;
   margin-right: 10px;
 }
+
+/* styles.css */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  z-index: 999;
+}
+
+.popup p {
+  margin-bottom: 10px;
+}
