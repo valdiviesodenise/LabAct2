@@ -373,17 +373,22 @@ body {
 /* styles.css */
 .popup {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border: 1px solid black;
-  z-index: 999;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 5px;
 }
 
 .popup p {
   margin-bottom: 10px;
+}
+
+.popup {
+  background-color: #ffe7e7;
+  font-family: Americana, serif;
+  color: #717171;
 }
 
 .add-to-cart {

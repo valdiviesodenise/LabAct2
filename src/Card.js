@@ -15,15 +15,17 @@ function Card(props) {
   }, [props.productname]);
 
   const handleAddToCart = () => {
-    setStockStatus("Successfully Added to Cart!");
-    setTimeout(() => {
-      setStockStatus("In Stock");
-    }, 700);
+    if (stockStatus !== "Out of Stock") {
+      setStockStatus("Successfully Added to Cart!");
+      setTimeout(() => {
+        setStockStatus("In Stock");
+      }, 700);
+    }
   };
 
   let message = "Successfully Added to Cart!";
 
-  if (stockStatus === "Out of Stock!") {
+  if (stockStatus === "Out of Stock") {
     message = "Out of Stock!";
   }
 
@@ -33,7 +35,7 @@ function Card(props) {
       <h2>{props.productname}</h2>
       <p>{props.price}</p>
       <button className="add-to-cart" onClick={handleAddToCart}>
-        Add to Cart
+        {stockStatus === "Out of Stock" ? "Out of Stock" : "Add to Cart"}
       </button>
       {/* Pop-up */}
       {stockStatus === "Successfully Added to Cart!" && (
